@@ -68,7 +68,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new()
     {
-        Title = "Van Lanschot Trading API",
+        Title = "Trading API",
         Version = "v1",
         Description = "API for stock trading operations"
     });
@@ -84,7 +84,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorClient", policy =>
     {
-        policy.WithOrigins("https://localhost:7000", "http://localhost:5000")
+        policy.WithOrigins("https://localhost:7190", "http://localhost:5028")
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials();

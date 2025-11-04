@@ -39,6 +39,6 @@ public class AccountConfiguration : IEntityTypeConfiguration<Account>
         builder.HasMany(a => a.Transactions)
             .WithOne(t => t.Account)
             .HasForeignKey(t => t.AccountId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }
