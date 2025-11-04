@@ -5,6 +5,10 @@ VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientTradePortal.Trading.Api", "ClientTradePortal.Trading.Api\ClientTradePortal.Trading.Api.csproj", "{0F0C9309-C6A8-444C-9483-EA64635A3C14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientTradePortal.Trading.Api.Tests", "Tests\ClientTradePortal.Trading.Api.Tests\ClientTradePortal.Trading.Api.Tests.csproj", "{8A1B2C3D-4E5F-6789-ABCD-EF0123456789}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientTradePortal.Trading.Api.IntegrationTests", "Tests\ClientTradePortal.Trading.Api.IntegrationTests\ClientTradePortal.Trading.Api.IntegrationTests.csproj", "{9B2C3D4E-5F67-89AB-CDEF-0123456789AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0F0C9309-C6A8-444C-9483-EA64635A3C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F0C9309-C6A8-444C-9483-EA64635A3C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F0C9309-C6A8-444C-9483-EA64635A3C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A1B2C3D-4E5F-6789-ABCD-EF0123456789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A1B2C3D-4E5F-6789-ABCD-EF0123456789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A1B2C3D-4E5F-6789-ABCD-EF0123456789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A1B2C3D-4E5F-6789-ABCD-EF0123456789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2C3D4E-5F67-89AB-CDEF-0123456789AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2C3D4E-5F67-89AB-CDEF-0123456789AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2C3D4E-5F67-89AB-CDEF-0123456789AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2C3D4E-5F67-89AB-CDEF-0123456789AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
