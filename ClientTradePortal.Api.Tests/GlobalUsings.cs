@@ -1,0 +1,9 @@
+global using ClientTradePortal.Trading.Api.Entities;
+global using ClientTradePortal.Trading.Api.Models.Requests;
+global using ClientTradePortal.Trading.Api.Repositories.Interfaces;
+global using ClientTradePortal.Trading.Api.Services;
+global using ClientTradePortal.Trading.Api.Services.Interfaces;
+global using FluentAssertions;
+global using Microsoft.Extensions.Logging;
+global using Moq;
+global using Xunit;
