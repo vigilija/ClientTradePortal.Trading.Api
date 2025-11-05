@@ -1,7 +1,4 @@
-﻿using FluentValidation;
-using ClientTradePortal.Trading.Api.Models.Requests;
-
-namespace ClientTradePortal.Trading.Api.Validators;
+﻿namespace ClientTradePortal.Trading.Api.Validators;
 
 public class OrderRequestValidator : AbstractValidator<OrderRequest>
 {

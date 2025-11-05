@@ -1,8 +1,4 @@
-﻿using System.Net;
-using System.Text.Json;
-using ClientTradePortal.Trading.Api.Models.Responses;
-
-namespace ClientTradePortal.Trading.Api.Middleware;
+﻿namespace ClientTradePortal.Trading.Api.Middleware;
 
 public class ExceptionHandlingMiddleware
 {

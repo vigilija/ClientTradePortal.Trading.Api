@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using ClientTradePortal.Trading.Api.Data;
-using ClientTradePortal.Trading.Api.Repositories.Interfaces;
-
-namespace ClientTradePortal.Trading.Api.Repositories;
+﻿namespace ClientTradePortal.Trading.Api.Repositories;
 
 public class UnitOfWork : IUnitOfWork
 {

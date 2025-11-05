@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ClientTradePortal.Trading.Api.Entities;
-
-namespace ClientTradePortal.Trading.Api.Data.Configurations;
+﻿namespace ClientTradePortal.Trading.Api.Data.Configurations;
 
 public class StockPositionConfiguration : IEntityTypeConfiguration<StockPosition>
 {

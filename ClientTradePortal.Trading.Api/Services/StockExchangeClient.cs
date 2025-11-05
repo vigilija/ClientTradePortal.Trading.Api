@@ -1,6 +1,4 @@
-﻿using ClientTradePortal.Trading.Api.Services.Interfaces;
-
-namespace ClientTradePortal.Trading.Api.Services;
+﻿namespace ClientTradePortal.Trading.Api.Services;
 
 public class StockExchangeClient : IStockExchangeClient
 {

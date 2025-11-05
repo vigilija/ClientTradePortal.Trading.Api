@@ -1,6 +1,4 @@
-﻿using ClientTradePortal.Trading.Api.Entities;
-
-namespace ClientTradePortal.Trading.Api.Repositories.Interfaces;
+﻿namespace ClientTradePortal.Trading.Api.Repositories.Interfaces;
 
 public interface IAccountRepository
 {

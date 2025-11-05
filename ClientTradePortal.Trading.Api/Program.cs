@@ -1,55 +1,3 @@
-//using System.Text.Json.Serialization;
-
-//var builder = WebApplication.CreateSlimBuilder(args);
-
-//builder.Services.ConfigureHttpJsonOptions(options =>
-//{
-//    options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
-//});
-
-//var app = builder.Build();
-
-//var sampleTodos = new Todo[] {
-//    new(1, "Walk the dog"),
-//    new(2, "Do the dishes", DateOnly.FromDateTime(DateTime.Now)),
-//    new(3, "Do the laundry", DateOnly.FromDateTime(DateTime.Now.AddDays(1))),
-//    new(4, "Clean the bathroom"),
-//    new(5, "Clean the car", DateOnly.FromDateTime(DateTime.Now.AddDays(2)))
-//};
-
-//var todosApi = app.MapGroup("/todos");
-//todosApi.MapGet("/", () => sampleTodos);
-//todosApi.MapGet("/{id}", (int id) =>
-//    sampleTodos.FirstOrDefault(a => a.Id == id) is { } todo
-//        ? Results.Ok(todo)
-//        : Results.NotFound());
-
-//app.Run();
-
-//public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
-
-//[JsonSerializable(typeof(Todo[]))]
-//internal partial class AppJsonSerializerContext : JsonSerializerContext
-//{
-
-//}
-// Contains:
-// - Service registration (DI)
-// - Middleware pipeline
-// - API endpoints (routes)
-// - App configuration
-using Microsoft.EntityFrameworkCore;
-using ClientTradePortal.Trading.Api.Data;
-using ClientTradePortal.Trading.Api.Services;
-using ClientTradePortal.Trading.Api.Services.Interfaces;
-using ClientTradePortal.Trading.Api.Repositories;
-using ClientTradePortal.Trading.Api.Repositories.Interfaces;
-using ClientTradePortal.Trading.Api.Middleware;
-using ClientTradePortal.Trading.Api.Models.Requests;
-using ClientTradePortal.Trading.Api.Models.Responses;
-using FluentValidation;
-using Serilog;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog
@@ -108,10 +56,9 @@ builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 // Memory Cache
 builder.Services.AddMemoryCache();
 
-// HTTP Client for external stock exchange API
+//// HTTP Client for external stock exchange API
 builder.Services.AddHttpClient<IStockExchangeClient, StockExchangeClient>(client =>
 {
-    client.BaseAddress = new Uri(builder.Configuration["ExternalApis:StockExchange"] ?? "https://api.example.com");
     client.Timeout = TimeSpan.FromSeconds(30);
 });
 
@@ -130,13 +77,6 @@ app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseCors("AllowBlazorClient");
-
-// ==================== API ENDPOINTS ====================
-
-// Health Check
-app.MapGet("/health", () => Results.Ok(new { Status = "Healthy", Timestamp = DateTime.UtcNow }))
-    .WithName("HealthCheck")
-    .WithTags("Health");
 
 // ==================== ACCOUNT ENDPOINTS ====================
 
@@ -288,6 +228,6 @@ if (app.Environment.IsDevelopment())
     }
 }
 
-Log.Information("Starting Van Lanschot Trading API");
+Log.Information("Starting Trading API");
 
 app.Run();

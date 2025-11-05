@@ -1,10 +1,4 @@
-﻿using ClientTradePortal.Trading.Api.Services.Interfaces;
-using ClientTradePortal.Trading.Api.Repositories.Interfaces;
-using ClientTradePortal.Trading.Api.Models.Requests;
-using ClientTradePortal.Trading.Api.Models.Responses;
-using ClientTradePortal.Trading.Api.Entities;
-
-namespace ClientTradePortal.Trading.Api.Services;
+﻿namespace ClientTradePortal.Trading.Api.Services;
 
 public class TradingService : ITradingService
 {

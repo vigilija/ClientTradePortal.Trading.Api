@@ -1,9 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ClientTradePortal.Trading.Api.Data;
-using ClientTradePortal.Trading.Api.Entities;
-using ClientTradePortal.Trading.Api.Repositories.Interfaces;
-
-namespace ClientTradePortal.Trading.Api.Repositories;
+﻿namespace ClientTradePortal.Trading.Api.Repositories;
 
 public class AccountRepository : IAccountRepository
 {
